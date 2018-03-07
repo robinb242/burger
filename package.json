@@ -11,7 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/robinb242/burger.git"
   },
-  "keywords": [],
+  "keywords": [
+    "handlebars-helper-css"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -23,5 +25,8 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "*"
   }
 }
