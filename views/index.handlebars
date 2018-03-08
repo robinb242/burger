@@ -1,41 +1,40 @@
-<img src ="../public/assets/images/hamburger.png" alt="hmburger">
+
+  <img src = "../assets/images/hamburger.jpg" alt="hamburger" id="logo" align="center">
+
+
 <h1>Eat-Da-Burger</h1>
+<div class="col-md col-md-offset-1">
+<h2 class ="uneatenTitle">Burgers to eat</h2>
 
-<h2>Cats that are not sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
+<ul class="uneaten">
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <p>
+        {{this.burger_name}}
+      </p>
+      <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="true">
+            <button type="submit" class="btn btn-default" style="background-color:black; color:yellow; padding: 15px">Eat it!</button>
+          </form>
     {{/unless}}
   {{/each}}
 </ul>
+</div>
+<h2>Burgers Eaten</h2>
 
-<h2>Cats that are sleepy!</h2>
 
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
 
 <h2>Enter a burger you want to eat and hit "submit" button.</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="cb">Burger Name:</label>
-    <input type="text" id="cb" name="name">
+    <input type="text"  id="cb" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="devour">Devour It!</label><br>
-    <input type="radio" name="devour" value="1" checked> Sleepy!<br>
-    <input type="radio" name="devour" value="0"> Awake
-  </div>
 
-  <button type="submit">Add Cat</button>
+  <button type="submit">Add Burger</button>
 </form>
 
- <button type="delete">Delete Cat</button>
+
+
