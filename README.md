@@ -4,16 +4,16 @@ Eat a burger - Node/Express/Handlebars Homework
 Simple site that lets you input a hamburger's name and add it to a list of burgers to be eaten. Then click on a button that indicates that you've eaten it. The burger then moves to a column indicating it has been eaten.
 
 ##Technologies Utilized
-**HTML**
-**CSS**
-**Jvascript**
-**MySQL**
-**Node.js**
+#HTML
+#CSS
+#Jvascript
+#MySQL
+#Node.js
     modules:
-    *express-handlebars*
-    *express*
-    *bodyparser*
-    *method-override*
+    *express-handlebars
+    *express
+    *bodyparser
+    *method-override
 
 The program also uses the ORM technique to make database queries avavilable to the javascript files. It also utilizes the Model View Controler file architecture to divide the program into components that work together.
 
